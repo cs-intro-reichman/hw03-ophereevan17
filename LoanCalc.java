@@ -28,7 +28,7 @@ public class LoanCalc {
 		System.out.print("Periodical payment, using bi-section search: ");
 		System.out.printf("%.2f", bisectionSolver(loan, rate, n, epsilon));
 		System.out.println();
-		System.out.println("number of iterations: " + iterationCounter);
+		System.out.println("number of iterations: " + iterationCounter1);
 	}
 	
 	/**
@@ -63,7 +63,7 @@ public class LoanCalc {
 			double g = (L + H) / 2.0;
 	
 			while ((H - L) > epsilon){
-				if (endBalance(loan, rate, n, H) * endBalance(loan, rate, n, L) > 0){
+				if (endBalance(loan, rate, n, g) * endBalance(loan, rate, n, L) > 0){
 					L = g;
 				}
 				else{

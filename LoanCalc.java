@@ -15,7 +15,7 @@ public class LoanCalc {
 		// Gets the loan data
 		double loan = Double.parseDouble(args[0]);
 		double rate = Double.parseDouble(args[1]);
-		int n = Integer.parseInt(args[2]);
+		int n = Integer.parseInt(args[2]); // periods to pay
 		System.out.println("Loan sum = " + loan + ", interest rate = " + rate + "%, periods = " + n);
 		
 		// Computes the periodical payment using brute force search
@@ -52,7 +52,7 @@ public class LoanCalc {
     /**
 	* Uses bisection search to compute an approximation of the periodical payment 
 	* that will bring the ending balance of a loan close to 0.
-	* Given: the sum of theloan, the periodical interest rate (as a percentage),
+	* Given: the sum of the loan, the periodical interest rate (as a percentage),
 	* the number of periods (n), and epsilon, a tolerance level.
 	*/
 	// Side effect: modifies the class variable iterationCounter.

@@ -29,7 +29,7 @@ public class Calendar {
 			//}
 	 		advance(); 		// Advances the date and the day-of-the-week from 1/1/1900 till 31/12/1999, inclusive.
         }
-		System.out.print("During the 20th century," + perfectSundays + " Sundays fell on the first day of the month");
+		System.out.print("During the 20th century, " + perfectSundays + " Sundays fell on the first day of the month");
 
 	 }
 	
@@ -64,19 +64,34 @@ public class Calendar {
 	}
 
 	
-	private static int nDaysInMonth(int month, int year) // Returns the number of days in the given month and year.
-	{
-		if (month == 4 || month == 6 || month == 9 || month == 11) nDaysInMonth = 30;  // April, June, September, and November have 30 days each.
-		else if (month == 2) 	// February has 28 days in a common year, and 29 days in a leap year.
-		{
-			if (isLeapYear(year)) return 29;
-			else return 28;
-		}
-		else return 31;    // All the other months have 31 days.
-	}
+	// private static int nDaysInMonth(int month, int year) // Returns the number of days in the given month and year.
+	// {
+	// 	if (month == 4 || month == 6 || month == 9 || month == 11) nDaysInMonth = 30;  // April, June, September, and November have 30 days each.
+	// 	else if (month == 2) 	// February has 28 days in a common year, and 29 days in a leap year.
+	// 	{
+	// 		if (isLeapYear(year)) return 29;
+	// 		else return 28;
+	// 	}
+	// 	else return 31;    // All the other months have 31 days.
+	// }
 
-}
+// }
 	 // Advances the date (day, month, year) and the day-of-the-week.
 	 // If the month changes, sets the number of days in this month.
 	 // Side effects: changes the static variables dayOfMonth, month, year, dayOfWeek, nDaysInMonth.
-	
+private static int nDaysInMonth(int month, int year) {
+    if (month == 4 || month == 6 || month == 9 || month == 11){
+        nDaysInMonth = 30;
+    } else if (month == 2) {
+        if (isLeapYear(year)){
+            nDaysInMonth = 29;
+        } else {
+            nDaysInMonth = 28;
+        }
+    } else {
+        nDaysInMonth = 31;
+    }
+    return nDaysInMonth;
+}
+
+}

@@ -37,7 +37,7 @@ public class Calendar {
 			if(month == 12)
 			{
 				month = 0;//restarts months back to January
-				year++; //advances year
+				year++; //advances the year
 			} 
 			month++;//if its the last day of the month but month doesn't equal 12.
 			dayOfMonth = 1;//restarts day of month

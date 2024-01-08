@@ -12,10 +12,10 @@ public class Calendar {
 
 	public static void main(String args[]) {
 		//int debugDaysCounter = 0;
+		// int perfectSundays = 0;
 		int theyear = Integer.parseInt(args[0]);
-		int perfectSundays = 0;
 
-	 	while (year <= theyear) //runs until year changes
+	 	while (year < theyear+1) //runs until year changes
 		{	
 			advance(); 		// Advances the date and the day-of-the-week from 1/1/1900 till 31/12/1999, inclusive.
 			while (theyear == year)
@@ -23,7 +23,7 @@ public class Calendar {
 				System.out.print(dayOfMonth + "/" + month + "/" + year);  //Prints each date dd/mm/yyyy in a separate line. 
 				if (dayOfWeek == 1) System.out.print(" Sunday");  //if (dayOfWeek == 1) System.out.print("Sunday"); 
 				System.out.println();
-				if (dayOfWeek == 1 && dayOfMonth == 1) perfectSundays++;
+				// if (dayOfWeek == 1 && dayOfMonth == 1) perfectSundays++;
 				advance();
 			}
 			//System.out.print("During the 20th century, " + perfectSundays + " Sundays fell on the first day of the month");
@@ -36,7 +36,7 @@ public class Calendar {
 		{	
 			if(month == 12)
 			{
-				month = 1;//restarts months back to January
+				month = 0;//restarts months back to January
 				year++; //advances year
 			} 
 			month++;//if its the last day of the month but month doesn't equal 12.

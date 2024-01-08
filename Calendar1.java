@@ -20,13 +20,6 @@ public class Calendar1 {
 			if (dayOfWeek == 1) System.out.print(" Sunday");  //if (dayOfWeek == 1) System.out.print("Sunday"); 
 			System.out.println();
 			if (dayOfWeek == 1 && dayOfMonth == 1) perfectSundays++;
-
-			//debugDaysCounter++;  // The following variable, used for debugging purposes, counts how many days were advanced so far.
-			//if (debugDaysCounter == 50) 
-			//{
-				//System.out.print(debugDaysCounter);
-				//break;
-			//}
 	 		advance(); 		// Advances the date and the day-of-the-week from 1/1/1900 till 31/12/1999, inclusive.
         }
 		System.out.print("During the 20th century," + perfectSundays + " Sundays fell on the first day of the month");

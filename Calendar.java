@@ -15,7 +15,7 @@ public class Calendar {
 		// int perfectSundays = 0;
 		int theyear = Integer.parseInt(args[0]);
 
-	 	while (year < theyear+1) //runs until year changes
+	 	while (year < theyear + 1) //runs until year changes
 		{	
 			advance(); 		// Advances the date and the day-of-the-week from 1/1/1900 till 31/12/1999, inclusive.
 			while (theyear == year)
@@ -41,7 +41,7 @@ public class Calendar {
 			} 
 			month++;//if its the last day of the month but month doesn't equal 12.
 			dayOfMonth = 1;//restarts day of month
-			nDaysInMonth = nDaysInMonth(dayOfMonth, year);
+			nDaysInMonth = nDaysInMonth(month, year);
 		} 
 		else dayOfMonth++;
 

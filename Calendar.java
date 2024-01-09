@@ -17,7 +17,7 @@ public class Calendar {
 
 	 	while (year < theyear + 1) //runs until year changes
 		{	
-			advance(); 		// Advances the date and the day-of-the-week from 1/1/1900 till 31/12/1999, inclusive.
+			advance(); 		
 			while (theyear == year)
 			{
 				System.out.print(dayOfMonth + "/" + month + "/" + year);  //Prints each date dd/mm/yyyy in a separate line. 

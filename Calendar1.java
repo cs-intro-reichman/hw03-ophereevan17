@@ -24,9 +24,9 @@ public class Calendar1 {
         }
 		System.out.print("During the 20th century," + perfectSundays + " Sundays fell on the first day of the month");
 
-	 }
+	}
 	
-	 private static void advance() {
+	private static void advance() {
 
 		if (dayOfMonth == nDaysInMonth) 
 		{	
@@ -42,7 +42,7 @@ public class Calendar1 {
 
 		if (dayOfWeek == 7) dayOfWeek = 1; //restarts day of week count;
 		else dayOfWeek++; //advances day of week
-	 } 
+	} 
 	 
 	// Returns true if the given year is a leap year, false otherwise.
 	private static boolean isLeapYear(int year) {
@@ -59,7 +59,7 @@ public class Calendar1 {
 	
 	private static int nDaysInMonth(int month, int year) // Returns the number of days in the given month and year.
 	{
-		if (month == 4 || month == 6 || month == 9 || month == 11) nDaysInMonth = 30;  // April, June, September, and November have 30 days each.
+		if (month == 4 || month == 6 || month == 9 || month == 11) return 30;  // April, June, September, and November have 30 days each.
 		else if (month == 2) 	// February has 28 days in a common year, and 29 days in a leap year.
 		{
 			if (isLeapYear(year)) return 29;

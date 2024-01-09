@@ -68,6 +68,19 @@ public class Calendar1 {
 		else return 31;    // All the other months have 31 days.
 	}
 
+	private static int nDaysInMonth(int month, int year) {
+		if (month == 4 || month == 6 || month == 9 || month == 11) {
+			return 30;  // April, June, September, and November have 30 days each.
+		} else if (month == 2) { // February has 28 days in a common year, and 29 days in a leap year.
+			if (isLeapYear(year)) {
+				return 29;
+			} else {
+				return 28;
+			}
+		} else {
+			return 31;  // All the other months have 31 days.
+		}
+	}
 }
 	 // Advances the date (day, month, year) and the day-of-the-week.
 	 // If the month changes, sets the number of days in this month.

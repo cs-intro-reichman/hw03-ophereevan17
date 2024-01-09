@@ -12,7 +12,7 @@ public class Calendar1 {
 
 	public static void main(String args[]) {
 		//int debugDaysCounter = 0;
-		//int perfectSundays = 0;
+		int perfectSundays = 0;
 
 	 	while (year < 2000) 
 		{	
